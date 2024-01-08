@@ -9,7 +9,7 @@ const routes = new Router();
 
 routes.post(
     '/singup',
-    // validate(AuthenticationController.validation.signup, {keyByField : true}, {abortEarly : false}),
+    validate(AuthenticationController.validation.signup, {keyByField : true}, {abortEarly : false}),
     UserController.signup
 )
 

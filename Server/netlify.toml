@@ -1,0 +1,6 @@
+[build]
+command = "npm run build"  # Adjust this command based on your project's build setup
+publish = "dist"  # Adjust the directory to your built output directory
+
+[functions]
+directory = "functions"  # The directory where Netlify will look for serverless functions

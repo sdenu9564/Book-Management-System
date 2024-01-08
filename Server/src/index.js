@@ -7,12 +7,12 @@ import 'dotenv/config';
 import ApiRoutes from './routes/index.js';
 
 
+
 const app = express();
 const httpServer = createServer(app);
 
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
-
 
 
 configMiddleware(app);

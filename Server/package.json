@@ -8,6 +8,10 @@
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
+  "engines": {
+    "node": "18.x"
+  },
+  
   "dependencies": {
     "aws-sdk": "^2.1483.0",
     "bcrypt": "^5.1.1",

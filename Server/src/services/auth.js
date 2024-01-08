@@ -98,16 +98,3 @@ export const authorize = (roles = []) => {
     },
   ];
 };
-
-export const passwordReset = async (req, res) => {
-  try {
-    const { email, new_password } = req.body;
-    const [updateRes] = await updatePassword(email, { password: new_password });
-    if (updateRes > 0) {
-      return sendHttpResponse(res, 'Password reset successfully', {});
-    }
-    return sendHttpResponse(res, 'Could not reset password', {}, 500, false);
-  } catch (err) {
-    return sendHttpResponse(res, err.message, {}, 500, false);
-  }
-};

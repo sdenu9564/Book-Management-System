@@ -38,23 +38,6 @@ export const validation = {
       })
     })
   },
-  create: {
-    body: Joi.object({
-      email: Joi.string().email().required().messages({
-        'string.empty': 'Email is required!',
-        'string.email': 'Please provide a valid email!'
-      }),
-      password: Joi.string().min(8).max(20).required().messages({
-        'string.empty': 'Password is required!',
-        'string.min': 'Password should be between 8-20 characters',
-        'string.max': 'Password should be between 8-20 characters'
-      }),
-      name: Joi.string().required().messages({
-        'string.empty': 'Name is required!'
-      }),
-      role: Joi.string().valid('admin', 'basic').required(),
-    })
-  },
   role: {
     body: Joi.object({
       email: Joi.string().email().required().messages({
