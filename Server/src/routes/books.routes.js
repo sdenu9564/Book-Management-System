@@ -16,7 +16,6 @@ routes.post(
 routes.get(
     '/search',
     authJwt,
-    validate(AuthenticationController.validation.search, { keyByField: true }, { abortEarly: false }),
     BookController.searchBooksByTitle
 );
 routes.put(

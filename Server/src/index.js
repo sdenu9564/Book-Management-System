@@ -18,6 +18,7 @@ const PASSWORD = process.env.DB_PASSWORD;
 configMiddleware(app);
 
 app.use('/api',ApiRoutes);
+app.use('/.netlify/functions/api',ApiRoutes);
 
 mongoose.connect(`mongodb://${USERNAME}:${PASSWORD}@cluster0-shard-00-00.otll1.mongodb.net:27017,cluster0-shard-00-01.otll1.mongodb.net:27017,cluster0-shard-00-02.otll1.mongodb.net:27017/?ssl=true&replicaSet=atlas-gxo9d2-shard-0&authSource=admin&retryWrites=true&w=majority`,{
     useNewUrlParser: true,
@@ -33,8 +34,6 @@ mongoose.connect(`mongodb://${USERNAME}:${PASSWORD}@cluster0-shard-00-00.otll1.m
 }).catch(err => {
     console.log("can not connect with your databse",err);
 });
-
-
 
 
 export default app;

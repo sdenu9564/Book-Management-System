@@ -62,17 +62,6 @@ export const validation = {
         'string.min': 'description should be required 10 character'
       })
     })
-  },
-  search: {
-    query: Joi.object({
-      title: Joi.string()
-        .required()
-        .min(3)
-        .messages({
-          'string.empty': 'Title is required',
-          'string.min': 'minimum 3 words required',
-        }),
-    }),
-  },
+  }
 };
 

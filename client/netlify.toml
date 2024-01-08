@@ -1,3 +1,0 @@
-[build]
-command = "npm run build"  # Adjust this command based on your project's build setup
-publish = "build"  # Adjust the directory to your built output directory
