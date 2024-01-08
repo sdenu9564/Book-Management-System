@@ -4,9 +4,9 @@ export const AccountContext = createContext();
 
 const AccountProvider = ({ children }) => {
   // Check if localStorage is available before accessing it
-  // const storedAccount = typeof localStorage !== "undefined" ? JSON.parse(localStorage?.getItem("account")) : null;
+  const storedAccount = typeof localStorage !== "undefined" ? JSON.parse(localStorage?.getItem("account")) : null;
 
-  const [account, setAccount] = useState(null);
+  const [account, setAccount] = useState(storedAccount || null);
 
   return (
     <AccountContext.Provider value={{ account, setAccount }}>

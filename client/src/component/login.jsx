@@ -20,7 +20,7 @@ export default function SignInSide() {
     if (account) {
       history.push("/")
     }
-  }, [account]);
+  }, [account,history]);
   
 
 

@@ -48,6 +48,9 @@ function App() {
           <PrivateRoute path="/my-libary">
             <MyLibary />
           </PrivateRoute>
+          <Route path="*">
+            <Redirect to="/" />
+          </Route>
         </Switch>
       </AccountProvider>
     </Router>

@@ -1,4 +1,4 @@
-import {useState, useContext}from 'react';
+import {useState, useContext, useEffect}from 'react';
 import { useHistory } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -17,7 +17,7 @@ import {AccountContext} from "../context/accountProvider";
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const {setAccount, account} = useContext(AccountContext);
+  const {account} = useContext(AccountContext);
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [firstnameError, setFirstnameError] = useState('');
@@ -25,6 +25,12 @@ export default function SignUp() {
   const [singUpError, setSingUpError] = useState('');
 
   const history = useHistory();
+
+  useEffect(() => {
+    if (account) {
+      history.push("/")
+    }
+  }, [account, history]);
 
   const handleSubmit = async(event) => {
     event.preventDefault();

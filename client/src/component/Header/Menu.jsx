@@ -91,7 +91,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const menuItems = [
   { text: 'Books', icon: <LibraryBooksIcon /> ,link : "/" },
   { text: 'Add Book', icon: <LibraryAddIcon />, link:"/add-book"  },
-  { text: 'Update Book', icon: <BookmarksIcon />, link:"/my-libary" },
+  { text: 'My Libary', icon: <BookmarksIcon />, link:"/my-libary" },
 ];
 
 export default function Menu() {
